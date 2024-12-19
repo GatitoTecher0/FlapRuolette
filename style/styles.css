@@ -250,13 +250,13 @@ button {
 }
 @font-face {
 	font-family: "LithosF";
-	src: url("/resources/fonts/lithos.ttf") format("truetype");
+	src: url("resources/fonts/lithos.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: "LithosB";
-	src: url("/resources/fonts/lithosbold.ttf") format("truetype");
+	src: url("resources/fonts/lithosbold.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }
