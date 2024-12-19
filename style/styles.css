@@ -5,7 +5,7 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #0a121f;
-    font-family: "LithosF", sans-serif;
+    font-family: 'Lithos Pro', sans-serif;
 }
 
 .contenedor {
@@ -20,7 +20,7 @@ body {
 }
 
 #text_rulette {
-    font-family: "LithosF", sans-serif;
+    font-family: 'Lithos Pro', sans-serif;
     color: black;
 }
 
@@ -40,7 +40,7 @@ body {
     position: relative;
     z-index: 1;
     background: transparent;
-    font-family: "LithosB", sans-serif;
+    font-family: 'Lithos Pro', sans-serif;
 }
 
 .controles {
@@ -63,7 +63,7 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    font-family: "LithosB", sans-serif;
+    font-family: 'Lithos Pro', sans-serif;
     margin-right: 500px;
 }
 .boton-girar {
@@ -106,14 +106,14 @@ button {
     padding: 10px 10px;
     font-size: 16px;
     cursor: pointer;
-    font-family: "LithosB", sans-serif;
+    font-family: 'Lithos Pro', sans-serif;
     margin-left: 740px;  
     margin-top: 20px;
     position: relative;
     padding: 10px 20px;
     font-size: 40px;
     cursor: pointer;
-    font-family: "LithosB", sans-serif;
+    font-family: 'Lithos Pro', sans-serif;
     margin-right: 300px;
     border: none; /* Sin borde */
     color: #fff; /* Color del texto */
@@ -154,7 +154,7 @@ button {
     margin-top: 20px;
     font-size: 14px;
     padding: 10px;
-    font-family: "LithosF", sans-serif;
+    font-family: 'Lithos Pro', sans-serif;
     margin-left: 425px;  
 }
 @font-face {
