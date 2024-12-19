@@ -159,13 +159,13 @@ button {
 }
 @font-face {
 	font-family: "LithosF";
-	src: url("fonts/lithos.woff") format("woff");
+	src: url("/fonts/lithos.woff") format("woff");
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: "LithosB";
-	src: url("fonts/lithosbold.ttf") format("truetype");
+	src: url("/fonts/lithosbold.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }
