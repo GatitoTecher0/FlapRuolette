@@ -5,29 +5,32 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #0a121f;
-    font-family: 'Lithos Pro', sans-serif;
+    font-family: "LithosF", sans-serif;
 }
 
+/* Contenedor principal */
 .contenedor {
     position: relative;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 75px; 
+    gap: 75px; /* Separación entre la ruleta y los controles */
     height: 100vh;
     width: 100%;
 }
 
+/*Fuente de la ruleta */
 #text_rulette {
-    font-family: 'Lithos Pro', sans-serif;
+    font-family: "LithosF", sans-serif;
     color: black;
 }
 
+/* Fondo circular detrás de la ruleta */
 .ruleta-fondo {
     position: absolute;
     top: 50%;
-    left: calc(45% - 570px); 
+    left: calc(45% - 570px); /* Ajuste para posicionar el fondo con los controles */
     width: 600px;
     height: 600px;
     border-radius: 50%;
@@ -36,13 +39,15 @@ body {
     z-index: -1;
 }
 
+/* Canvas de la ruleta */
 #idcanvas {
     position: relative;
     z-index: 1;
     background: transparent;
-    font-family: 'Lithos Pro', sans-serif;
+    font-family: "LithosB", sans-serif;
 }
 
+/* Contenedor de controles */
 .controles {
     display: flex;
     flex-direction: column;
@@ -50,6 +55,7 @@ body {
     gap: 20px;
 }
 
+/* Estilos del textarea */
 #concursantesInput {
     width: 250px;
     height: 150px;
@@ -57,13 +63,14 @@ body {
     margin-bottom: 10px;
 }
 
+/* Estilos del botón */
 button {
     margin-top: 20px;
     position: relative;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    font-family: 'Lithos Pro', sans-serif;
+    font-family: "LithosB", sans-serif;
     margin-right: 500px;
 }
 .boton-girar {
@@ -106,14 +113,14 @@ button {
     padding: 10px 10px;
     font-size: 16px;
     cursor: pointer;
-    font-family: 'Lithos Pro', sans-serif;
+    font-family: "LithosB", sans-serif;
     margin-left: 740px;  
     margin-top: 20px;
     position: relative;
     padding: 10px 20px;
     font-size: 40px;
     cursor: pointer;
-    font-family: 'Lithos Pro', sans-serif;
+    font-family: "LithosB", sans-serif;
     margin-right: 300px;
     border: none; /* Sin borde */
     color: #fff; /* Color del texto */
@@ -154,18 +161,18 @@ button {
     margin-top: 20px;
     font-size: 14px;
     padding: 10px;
-    font-family: 'Lithos Pro', sans-serif;
+    font-family: "LithosF", sans-serif;
     margin-left: 425px;  
 }
 @font-face {
 	font-family: "LithosF";
-	src: url("/lithos.woff") format("truetype");
+	src: url("style/Reaver-Bold.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: "LithosB";
-	src: url("/lithosbold.ttf") format("truetype");
+	src: url("style/Reaver-Bold.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -202,7 +209,6 @@ h1 {
         color: rgb(132, 0, 255);
     }
 }
-/* Ocultar barras de desplazamiento pero permitir scroll */
 html, body {
     overflow: auto; /* Permitir el desplazamiento */
     scrollbar-width: none; /* Para navegadores Firefox */
@@ -225,18 +231,6 @@ body::-webkit-scrollbar {
     z-index: 1;
 }
 
-/*.flecha {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%), rotate(90deg);
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 20px solid rgb(174, 0, 255);
-    z-index: 10;
-}*/
 .footer {
     background-color: #33333300; /* Fondo oscuro */
     color: white; /* Texto blanco (opcional) */
