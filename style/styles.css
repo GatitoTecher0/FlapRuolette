@@ -1,0 +1,384 @@
+/* Estilos generales
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+Estilos para la página principal
+.inicio {
+    background-image: url('fondo.jpg'); /* Cambia 'fondo.jpg' por la ruta de tu imagen de fondo 
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+.inicio-contenido {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.boton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Estilos para la página de la ruleta 
+.container {
+    text-align: center;
+    max-width: 400px;
+}
+
+.ruleta {
+    width: 300px;
+    height: 300px;
+    border: 10px solid #333;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    transition: transform 4s ease-out;
+    outline: none;
+}
+
+.sector {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 0;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+.premios-input {
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    font-size: 16px;
+    resize: none;
+    overflow-y: auto;
+}*/
+/* Fondo del cuerpo */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #0a121f;
+    font-family: "LithosF", sans-serif;
+}
+
+/* Contenedor principal */
+.contenedor {
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 75px; /* Separación entre la ruleta y los controles */
+    height: 100vh;
+    width: 100%;
+}
+
+/*Fuente de la ruleta */
+#text_rulette {
+    font-family: "LithosF", sans-serif;
+    color: black;
+}
+
+/* Fondo circular detrás de la ruleta */
+.ruleta-fondo {
+    position: absolute;
+    top: 50%;
+    left: calc(45% - 570px); /* Ajuste para posicionar el fondo con los controles */
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #fffedf, #fffedf, #fffedf);
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+/* Canvas de la ruleta */
+#idcanvas {
+    position: relative;
+    z-index: 1;
+    background: transparent;
+    font-family: "LithosB", sans-serif;
+}
+
+/* Contenedor de controles */
+.controles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Estilos del textarea */
+#concursantesInput {
+    width: 250px;
+    height: 150px;
+    resize: vertical;
+    margin-bottom: 10px;
+}
+
+/* Estilos del botón */
+button {
+    margin-top: 20px;
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "LithosB", sans-serif;
+    margin-right: 500px;
+}
+.boton-girar {
+    margin-top: 20px;
+    position: relative;
+    padding: 10px 20px;
+    font-size: 50px;
+    cursor: pointer;
+    font-family: "LithosB", sans-serif;
+    margin-right: -420px;
+    border: none; /* Sin borde */
+    color: #fff; /* Color del texto */
+    background-color: #9600bb; /* Fondo azul */
+    box-shadow: 0 4px 6px rgba(142, 21, 190, 0.644); /* Sombra elegante */
+    cursor: pointer; /* Indicador interactivo */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Suavizar cambios */
+}
+
+/* Efectos hover y active */
+.boton-girar:hover {
+    background-color: #f700f7; /* Cambiar color en hover */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.boton-girar:active {
+    transform: translateY(1px); /* Efecto de clic */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reducir sombra al presionar */
+}
+
+/* Opcional: estilos deshabilitados */
+.boton-girar:disabled {
+    background-color: #ccc; /* Fondo gris */
+    color: #666; /* Texto desactivado */
+    cursor: not-allowed; /* No interactivo */
+    box-shadow: none; /* Sin sombra */
+}
+.boton-actualizar{
+    margin-top: 20px;
+    position: relative;
+    padding: 10px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "LithosB", sans-serif;
+    margin-left: 740px;  
+    margin-top: 20px;
+    position: relative;
+    padding: 10px 20px;
+    font-size: 40px;
+    cursor: pointer;
+    font-family: "LithosB", sans-serif;
+    margin-right: 300px;
+    border: none; /* Sin borde */
+    color: #fff; /* Color del texto */
+    background-color: #9600bb; /* Fondo azul */
+    box-shadow: 0 4px 6px rgba(142, 21, 190, 0.644); /* Sombra elegante */
+    cursor: pointer; /* Indicador interactivo */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Suavizar cambios */
+    }
+    
+/* Efectos hover y active */
+.boton-actualizar:hover {
+    background-color: #f700f7; /* Cambiar color en hover */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.boton-actualizar:active {
+    transform: translateY(1px); /* Efecto de clic */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reducir sombra al presionar */
+}
+
+/* Opcional: estilos deshabilitados */
+.boton-actualizar:disabled {
+    background-color: #ccc; /* Fondo gris */
+    color: #666; /* Texto desactivado */
+    cursor: not-allowed; /* No interactivo */
+    box-shadow: none; /* Sin sombra */
+}
+.imagen-lateral {
+    max-width: 300px;
+    height: auto;
+    border-radius: 1px; /* Cambié a positivo, ya que los valores negativos no son válidos */
+    margin-left: 300px; /* Ajusta este valor para mover más o menos */
+}
+/* Estilo del área de texto */
+.textarea-in {
+    width: 100%;
+    height: 80px;
+    margin-top: 20px;
+    font-size: 14px;
+    padding: 10px;
+    font-family: "LithosF", sans-serif;
+    margin-left: 425px;  
+}
+@font-face {
+	font-family: "LithosF";
+	src: url("/resources/fonts/lithos.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "LithosB";
+	src: url("/resources/fonts/lithosbold.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+h1 {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+    text-shadow: 4px 4px 6px rgb(0, 0, 0);
+    margin: 0;
+    animation: cambioColor 3s infinite; /* Cambia de color en un bucle infinito */
+}
+
+/* Define la animación de colores */
+@keyframes cambioColor {
+    0% {
+        color: white;
+    }
+    20% {
+        color: #00ff00;
+    }
+    35% {
+        color: rgb(212, 0, 255);
+    }
+    50% {
+        color: rgb(255, 251, 0);
+    }
+    80% {
+        color: #d600c4;
+    }
+    100% {
+        color: rgb(132, 0, 255);
+    }
+}
+/* Ocultar barras de desplazamiento pero permitir scroll */
+html, body {
+    overflow: auto; /* Permitir el desplazamiento */
+    scrollbar-width: none; /* Para navegadores Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none; /* Para navegadores basados en WebKit (Chrome, Edge, etc.) */
+}
+
+.ruleta-container {
+    position: relative;
+    display: inline-block;
+}
+
+#idcanvas {
+    border: 2px solid #000;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+/*.flecha {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%), rotate(90deg);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid rgb(174, 0, 255);
+    z-index: 10;
+}*/
+.footer {
+    background-color: #33333300; /* Fondo oscuro */
+    color: white; /* Texto blanco (opcional) */
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Ocupar todo el ancho */
+    display: flex;
+    align-items: center;
+}
+.footer-bar a {
+    pointer-events: none;
+}
+.footer-bar a:hover {
+    pointer-events: auto;
+}
+.slogo-bar {
+    display: flex;
+    gap: 10px; /* Espacio entre los logos */
+    margin-left: 10px; /* Separación desde el borde izquierdo */
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain; /* Ajustar sin deformar */
+    border: 1px solid #cccccc00; /* Borde ligero para los logos */
+    filter: invert(1) brightness(2); /* Cambia de negro a blanco */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: rgba(255, 255, 255, 0); /* Fondo para logos transparentes */
+    margin-left: 5px;
+    margin-left: 5px;
+    margin-bottom: 30px;
+    transition: transform 0.2s;
+}
+.logo-firt {
+    width: 50px;
+    height: 50px;
+    object-fit: contain; /* Ajustar sin deformar */
+    border: 1px solid #cccccc00; /* Borde ligero para los logos */
+    filter: invert(1) brightness(2); /* Cambia de negro a blanco */
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0); /* Fondo para logos transparentes */
+    margin-left: 20px;
+    margin-bottom: 30px;
+    transition: transform 0.2s;
+}
+.logo:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
+}
+.logo-firt:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
+}
