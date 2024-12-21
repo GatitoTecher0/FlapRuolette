@@ -30,7 +30,7 @@ function drawCanvas() {
         context.translate(center, center);
         context.rotate(3 * 2 * Math.PI / (5 * array_concursantes.length) + i * 2 * Math.PI / array_concursantes.length);
         context.translate(-center, -center);
-        context.font = "13px LithosB";
+        context.font = "13px Faculty Glyphic";
         context.textAlign = "right";
         context.fillStyle = "black";
         context.fillText(array_concursantes[i], canvas.width - 45, center);
