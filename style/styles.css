@@ -74,7 +74,7 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    font-family: "LithosB", sans-serif;
+    font-family: "Faculty Glyphic", sans-serif;
     margin-right: 500px;
 }
 .boton-girar {
@@ -83,7 +83,7 @@ button {
     padding: 10px 20px;
     font-size: 50px;
     cursor: pointer;
-    font-family: "LithosB", sans-serif;
+    font-family: "Faculty Glyphic", sans-serif;
     margin-right: -420px;
     border: none; /* Sin borde */
     color: #fff; /* Color del texto */
@@ -117,7 +117,7 @@ button {
     padding: 10px 10px;
     font-size: 16px;
     cursor: pointer;
-    font-family: "LithosB", sans-serif;
+    font-family: "Faculty Glyphic", sans-serif;
     margin-left: 740px;  
     margin-top: 20px;
     position: relative;
