@@ -12,29 +12,26 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-/* Contenedor principal */
 .contenedor {
     position: relative;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 75px; /* Separación entre la ruleta y los controles */
+    gap: 75px;
     height: 100vh;
     width: 100%;
 }
 
-/*Fuente de la ruleta */
 #text_rulette {
     font-family: "Faculty Glyphic", sans-serif;
     color: black;
 }
 
-/* Fondo circular detrás de la ruleta */
 .ruleta-fondo {
     position: absolute;
     top: 50%;
-    left: calc(45% - 570px); /* Ajuste para posicionar el fondo con los controles */
+    left: calc(45% - 570px);
     width: 600px;
     height: 600px;
     border-radius: 50%;
@@ -43,7 +40,6 @@ body {
     z-index: -1;
 }
 
-/* Canvas de la ruleta */
 #idcanvas {
     position: relative;
     z-index: 1;
@@ -51,7 +47,6 @@ body {
     font-family: "Faculty Glyphic", sans-serif;
 }
 
-/* Contenedor de controles */
 .controles {
     display: flex;
     flex-direction: column;
@@ -59,7 +54,6 @@ body {
     gap: 20px;
 }
 
-/* Estilos del textarea */
 #concursantesInput {
     width: 250px;
     height: 150px;
@@ -67,7 +61,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* Estilos del botón */
 button {
     margin-top: 20px;
     position: relative;
@@ -85,31 +78,29 @@ button {
     cursor: pointer;
     font-family: "Faculty Glyphic", sans-serif;
     margin-right: -420px;
-    border: none; /* Sin borde */
-    color: #fff; /* Color del texto */
-    background-color: #9600bb; /* Fondo azul */
-    box-shadow: 0 4px 6px rgba(142, 21, 190, 0.644); /* Sombra elegante */
-    cursor: pointer; /* Indicador interactivo */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Suavizar cambios */
+    border: none;
+    color: #fff; 
+    background-color: #9600bb;
+    box-shadow: 0 4px 6px rgba(142, 21, 190, 0.644); 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
 }
 
-/* Efectos hover y active */
 .boton-girar:hover {
-    background-color: #f700f7; /* Cambiar color en hover */
-    transform: translateY(-2px); /* Efecto de elevación */
+    background-color: #f700f7; 
+    transform: translateY(-2px); 
 }
 
 .boton-girar:active {
-    transform: translateY(1px); /* Efecto de clic */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reducir sombra al presionar */
+    transform: translateY(1px); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Opcional: estilos deshabilitados */
 .boton-girar:disabled {
-    background-color: #ccc; /* Fondo gris */
-    color: #666; /* Texto desactivado */
-    cursor: not-allowed; /* No interactivo */
-    box-shadow: none; /* Sin sombra */
+    background-color: #ccc; 
+    color: #666; 
+    cursor: not-allowed; 
+    box-shadow: none; 
 }
 .boton-actualizar{
     margin-top: 20px;
@@ -126,39 +117,34 @@ button {
     cursor: pointer;
     font-family: "Faculty Glyphic", sans-serif;
     margin-right: 300px;
-    border: none; /* Sin borde */
-    color: #fff; /* Color del texto */
-    background-color: #9600bb; /* Fondo azul */
-    box-shadow: 0 4px 6px rgba(142, 21, 190, 0.644); /* Sombra elegante */
-    cursor: pointer; /* Indicador interactivo */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Suavizar cambios */
+    border: none; 
+    color: #fff; 
+    background-color: #9600bb; 
+    box-shadow: 0 4px 6px rgba(142, 21, 190, 0.644); 
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
     }
-    
-/* Efectos hover y active */
+
 .boton-actualizar:hover {
-    background-color: #f700f7; /* Cambiar color en hover */
-    transform: translateY(-2px); /* Efecto de elevación */
+    background-color: #f700f7; 
+    transform: translateY(-2px); 
 }
 
 .boton-actualizar:active {
-    transform: translateY(1px); /* Efecto de clic */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reducir sombra al presionar */
+    transform: translateY(1px); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
 }
-
-/* Opcional: estilos deshabilitados */
 .boton-actualizar:disabled {
-    background-color: #ccc; /* Fondo gris */
-    color: #666; /* Texto desactivado */
-    cursor: not-allowed; /* No interactivo */
-    box-shadow: none; /* Sin sombra */
+    background-color: #ccc; 
+    color: #666; 
+    cursor: not-allowed; 
+    box-shadow: none; 
 }
 .imagen-lateral {
     max-width: 300px;
     height: auto;
-    border-radius: 1px; /* Cambié a positivo, ya que los valores negativos no son válidos */
-    margin-left: 300px; /* Ajusta este valor para mover más o menos */
-}
-/* Estilo del área de texto */
+    border-radius: 1px; 
+    margin-left: 300px; 
 .textarea-in {
     width: 100%;
     height: 80px;
@@ -189,10 +175,9 @@ h1 {
     color: white;
     text-shadow: 4px 4px 6px rgb(0, 0, 0);
     margin: 0;
-    animation: cambioColor 3s infinite; /* Cambia de color en un bucle infinito */
+    animation: cambioColor 3s infinite; 
 }
 
-/* Define la animación de colores */
 @keyframes cambioColor {
     0% {
         color: white;
@@ -214,13 +199,13 @@ h1 {
     }
 }
 html, body {
-    overflow: auto; /* Permitir el desplazamiento */
-    scrollbar-width: none; /* Para navegadores Firefox */
+    overflow: auto; 
+    scrollbar-width: none; 
 }
 
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
-    display: none; /* Para navegadores basados en WebKit (Chrome, Edge, etc.) */
+    display: none; 
 }
 
 .ruleta-container {
@@ -236,13 +221,13 @@ body::-webkit-scrollbar {
 }
 
 .footer {
-    background-color: #33333300; /* Fondo oscuro */
-    color: white; /* Texto blanco (opcional) */
+    background-color: #33333300; 
+    color: white; 
     padding: 10px 0;
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100%; /* Ocupar todo el ancho */
+    width: 100%; 
     display: flex;
     align-items: center;
 }
@@ -254,18 +239,18 @@ body::-webkit-scrollbar {
 }
 .slogo-bar {
     display: flex;
-    gap: 10px; /* Espacio entre los logos */
-    margin-left: 10px; /* Separación desde el borde izquierdo */
+    gap: 10px; 
+    margin-left: 10px;
 }
 
 .logo {
     width: 50px;
     height: 50px;
-    object-fit: contain; /* Ajustar sin deformar */
-    border: 1px solid #cccccc00; /* Borde ligero para los logos */
-    filter: invert(1) brightness(2); /* Cambia de negro a blanco */
-    border-radius: 5px; /* Bordes redondeados */
-    background-color: rgba(255, 255, 255, 0); /* Fondo para logos transparentes */
+    object-fit: contain;
+    border: 1px solid #cccccc00; 
+    filter: invert(1) brightness(2); 
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0); 
     margin-left: 5px;
     margin-left: 5px;
     margin-bottom: 30px;
@@ -274,18 +259,18 @@ body::-webkit-scrollbar {
 .logo-firt {
     width: 50px;
     height: 50px;
-    object-fit: contain; /* Ajustar sin deformar */
-    border: 1px solid #cccccc00; /* Borde ligero para los logos */
-    filter: invert(1) brightness(2); /* Cambia de negro a blanco */
+    object-fit: contain; 
+    border: 1px solid #cccccc00; 
+    filter: invert(1) brightness(2); 
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0); /* Fondo para logos transparentes */
+    background-color: rgba(255, 255, 255, 0); 
     margin-left: 20px;
     margin-bottom: 30px;
     transition: transform 0.2s;
 }
 .logo:hover {
-    transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
+    transform: scale(1.1); 
 }
 .logo-firt:hover {
-    transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
+    transform: scale(1.1); 
 }
