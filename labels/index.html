@@ -9,18 +9,27 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-    <h1>💀 ¡¡ RULETA DEL HUESOS !! 💀
+     <h1>💀 ¡¡ RULETA DEL HUESOS !! 💀
     </h1>
     <div> 
         <img src="/resources/pictures/pixil-layer-Background.png" alt="Imagen relacionada" class="imagen-lateral" width="500" height="500">
     </div>
     <div class="contenedor">
+        <!-- Fondo de la ruleta detrás del canvas -->
         <div class="ruleta-fondo">
+        
+            <!-- Canvas de la ruleta -->
             <canvas id="idcanvas" width="600" height="600"></canvas>
+            
+            <!-- Flecha estática encima de la ruleta -->
             <div id="flecha" class="flecha"></div>
         </div>
+    
+        <!-- Contenedor de controles en el lado derecho -->
         <div class="controles">
             <button onclick="sortear()" class="boton-girar"><span id="idestado">Sortear</span></button>
+
+            <!-- Área de entrada de texto para concursantes -->
             <textarea id="concursantesInput" class="textarea-in" placeholder="Escribe los nombres de los concursantes, cada uno en una nueva línea"></textarea>
             <button onclick="actualizarConcursantes()" class="boton-actualizar">Actualizar</button>
         </div>
