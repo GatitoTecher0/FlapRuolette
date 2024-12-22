@@ -8,6 +8,11 @@ body {
     font-family: "LithosF", sans-serif;
 }
 
+.faculty-glyphic-regular {
+  font-family: "Faculty Glyphic", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 /* Contenedor principal */
 .contenedor {
     position: relative;
