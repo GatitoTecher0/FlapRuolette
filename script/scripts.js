@@ -7,7 +7,7 @@ let context = canvas.getContext("2d");
 let center = canvas.width / 2;
 
 document.fonts.ready.then(function() {
-    context.font = "13px Faculty Glyphic";
+    context.font = "14px Faculty Glyphic";
     drawCanvas();
 });
 
@@ -29,7 +29,7 @@ function drawCanvas() {
         context.translate(center, center);
         context.rotate(3 * 2 * Math.PI / (5 * array_concursantes.length) + i * 2 * Math.PI / array_concursantes.length);
         context.translate(-center, -center);
-        context.font = "13px Faculty Glyphic";
+        context.font = "14px Faculty Glyphic";
         context.textAlign = "right";
         context.fillStyle = "black";
         context.fillText(array_concursantes[i], canvas.width - 45, center);
