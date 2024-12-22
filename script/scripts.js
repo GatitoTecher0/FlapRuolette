@@ -11,9 +11,8 @@ document.fonts.ready.then(function() {
     drawCanvas();
 });
 
-// Dibuja la ruleta con segmentos de colores
 function drawCanvas() {
-    context.clearRect(0, 0, canvas.width, canvas.height); // Limpia el canvas
+    context.clearRect(0, 0, canvas.width, canvas.height);
     for (let i = 0; i < array_concursantes.length; i++) {
         context.beginPath();
         context.moveTo(center, center);
@@ -22,9 +21,9 @@ function drawCanvas() {
         context.fillStyle = ['#fd7eff', '#7ee2ff', '#7effa5', '#f5ff7e', '#ffc46a'][i % 5];
         context.fill();
 
-        context.strokeStyle = "#fffedf";  // Color del borde (blanco)
-        context.lineWidth = 1;  // Grosor del borde
-        context.stroke();  // Dibuja el borde alrededor del segmento
+        context.strokeStyle = "#fffedf";
+        context.lineWidth = 1;
+        context.stroke();
 
         context.save();
         context.translate(center, center);
@@ -38,30 +37,25 @@ function drawCanvas() {
     }
 }
 
-// Actualiza la lista de concursantes desde el textarea
 function actualizarConcursantes() {
     const inputText = document.getElementById("concursantesInput").value;
-    
-    // Divide el texto en líneas y filtra las que estén vacías
+
     array_concursantes = inputText.split("\n").filter(name => name.trim() !== "");
-    
-    // Mezcla el array de concursantes de forma aleatoria
+
     array_concursantes = array_concursantes.sort(() => Math.random() - 0.5);
     
-    drawCanvas();  // Redibuja la ruleta con las opciones actualizadas y reordenadas
+    drawCanvas(); 
 }
 
 let clic = 0;
-let pos_ini = 0; // Ángulo inicial
+let pos_ini = 0; 
 let movement;
-let speed = 15;  // Velocidad inicial
-let deceleration = 0.1; // Desaceleración gradual
+let speed = 15; 
+let deceleration = 0.1; 
 let winner = "";
 
-// Indica si la ruleta está girando
 let isMoving = false;
 
-// Función para sortear
 function sortear() {
     if (isMoving) {
         console.log('El movimiento ya está activo');
@@ -76,17 +70,15 @@ function sortear() {
         if (speed <= 0) {
             clearInterval(movement);
             movement = null;
-            isMoving = false; // Permitir volver a presionar el botón
+            isMoving = false;
             showResult();
         }
     }, 10);
 }
 
-// Función para mostrar el resultado
 function showResult() {
-    // Ajusta el cálculo teniendo en cuenta la flecha estática
-    let angle = pos_ini % 360; // Ángulo final de la ruleta
-    let winnerIndex = Math.floor(((angle + 90) % 360) / (360 / array_concursantes.length));  // Ajuste para la flecha
+    let angle = pos_ini % 360; 
+    let winnerIndex = Math.floor(((angle + 90) % 360) / (360 / array_concursantes.length)); 
     let winner = array_concursantes[winnerIndex];
     
     Swal.fire({
@@ -94,12 +86,11 @@ function showResult() {
         text: "El premio es: " + winner,
         icon: "success",
         confirmButtonText: "¡Felicidades!",
-        background: '#404040',  // Color de fondo
-        color: '#ffffff',  // Color del texto
-        confirmButtonColor: '#9600bb',  // Color del botón de confirmación
-        titleColor: '#ff5733',  // Color del título
+        background: '#404040', 
+        color: '#ffffff', 
+        confirmButtonColor: '#9600bb', 
+        titleColor: '#ff5733', 
     });
 }
 
-// Dibuja la ruleta inicialmente con los concursantes por defecto
 drawCanvas();
