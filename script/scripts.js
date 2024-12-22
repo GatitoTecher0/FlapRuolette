@@ -7,7 +7,7 @@ let context = canvas.getContext("2d");
 let center = canvas.width / 2;
 
 document.fonts.ready.then(function() {
-    context.font = "13px LithosB";
+    context.font = "13px Faculty Glyphic";
     drawCanvas();
 });
 
